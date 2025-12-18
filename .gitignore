@@ -7,8 +7,25 @@ gt_data/*
 tracker_output/*
 !tracker_output/Readme.md
 output/*
-data
+data/*
 !goutput/Readme.md
 **/__pycache__
 .idea
 error_log.txt
+# exclude gt tracks data for datasets MOT25A, MOT25V, MOT25AV
+!data/gt/
+data/gt/*
+!data/gt/mot_challenge/
+data/gt/mot_challenge/*
+!data/gt/mot_challenge/MOT25A-train
+!data/gt/mot_challenge/MOT25V-train
+!data/gt/mot_challenge/MOT25AV-train
+# exclude predicted tracks data for datasets MOT25A, MOT25V, MOT25AV
+!data/trackers/
+data/trackers/*
+!data/trackers/mot_challenge/
+data/trackers/mot_challenge/*
+!data/trackers/mot_challenge/MOT25A-train
+!data/trackers/mot_challenge/MOT25V-train
+!data/trackers/mot_challenge/MOT25AV-train
+

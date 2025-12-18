@@ -1,6 +1,7 @@
 from .kitti_2d_box import Kitti2DBox
 from .kitti_mots import KittiMOTS
 from .mot_challenge_2d_box import MotChallenge2DBox
+from .av_mot_challenge import AVMotChallenge
 from .mots_challenge import MOTSChallenge
 from .bdd100k import BDD100K
 from .davis import DAVIS

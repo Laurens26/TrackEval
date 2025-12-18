@@ -1,0 +1,264 @@
+(base) PS C:\Users\Laurens\OneDrive\0_Masterarbeit_SensorFusion_Laurens\Implementation\TrackEval>  c:; cd 'c:\Users\Laurens\OneDrive\0_Masterarbeit_SensorFusion_Laurens\Implementation\TrackEval'; c:\Users\Laurens\AppData\Local\Programs\Python\Python311\python.exe c:\Users\Laurens\.vscode\extensions\ms-python.debugpy-2025.16.0-win32-x64\bundled\libs\debugpy\launcher 65235 -- C:\Users\Laurens\OneDrive\0_Masterarbeit_SensorFusion_Laurens\Implementation\TrackEval\scripts\run_av_mot_challenge.py --BENCHMARK MOT25A --GT_LOC_FORMA '{gt_folder}/{seq}/gt/gt.jsonl' --SPLIT_TO_EVAL train --TRACKERS_TO_EVAL MS-GLMB-GMS --METRICS HOTA --USE_PARALLEL False --NUM_PARALLEL_CORES 1 --DO_PREPROC False 
+Error importing BURST due to missing underlying dependency: No module named 'pycocotools'
+
+Eval Config:
+USE_PARALLEL         : False
+NUM_PARALLEL_CORES   : 1
+BREAK_ON_ERROR       : True
+RETURN_ON_ERROR      : False
+LOG_ON_ERROR         : C:\Users\Laurens\OneDrive\0_Masterarbeit_SensorFusion_Laurens\Implementation\TrackEval\error_log.txt
+PRINT_RESULTS        : True
+PRINT_ONLY_COMBINED  : False
+PRINT_CONFIG         : True
+TIME_PROGRESS        : True
+DISPLAY_LESS_PROGRESS : False
+OUTPUT_SUMMARY       : True
+OUTPUT_EMPTY_CLASSES : True
+OUTPUT_DETAILED      : True
+PLOT_CURVES          : True
+
+AVMotChallenge Config:
+PRINT_CONFIG         : True
+GT_FOLDER            : C:\Users\Laurens\OneDrive\0_Masterarbeit_SensorFusion_Laurens\Implementation\TrackEval\data/gt/mot_challenge/
+TRACKERS_FOLDER      : C:\Users\Laurens\OneDrive\0_Masterarbeit_SensorFusion_Laurens\Implementation\TrackEval\data/trackers/mot_challenge/
+OUTPUT_FOLDER        : None
+TRACKERS_TO_EVAL     : ['MS-GLMB-GMS']
+CLASSES_TO_EVAL      : ['pedestrian']
+BENCHMARK            : MOT25A
+SPLIT_TO_EVAL        : train
+INPUT_AS_ZIP         : False
+DO_PREPROC           : False
+TRACKER_SUB_FOLDER   : data
+OUTPUT_SUB_FOLDER    :
+TRACKER_DISPLAY_NAMES : None
+SEQMAP_FOLDER        : None
+SEQMAP_FILE          : None
+SEQ_INFO             : None
+GT_LOC_FORMAT        : {gt_folder}/{seq}/gt/gt.jsonl
+SKIP_SPLIT_FOL       : False
+
+Evaluating 1 tracker(s) on 4 sequence(s) for 1 class(es) on AVMotChallenge dataset using the following metrics: HOTA, Count
+
+
+Evaluating MS-GLMB-GMS
+
+    AVMotChallenge.get_raw_seq_data(MS-GLMB-GMS, MOT25A-01)                0.0049 sec
+    AVMotChallenge.get_preprocessed_seq_data(pedestrian)                   0.0140 sec
+    HOTA.eval_sequence()                                                   0.0204 sec
+    Count.eval_sequence()                                                  0.0001 sec
+1 eval_sequence(MOT25A-01, MS-GLMB-GMS)                                  0.0428 sec
+    AVMotChallenge.get_raw_seq_data(MS-GLMB-GMS, MOT25A-02)                0.0047 sec
+    AVMotChallenge.get_preprocessed_seq_data(pedestrian)                   0.0122 sec
+    HOTA.eval_sequence()                                                   0.0173 sec
+    Count.eval_sequence()                                                  0.0000 sec
+2 eval_sequence(MOT25A-02, MS-GLMB-GMS)                                  0.0364 sec
+    AVMotChallenge.get_raw_seq_data(MS-GLMB-GMS, MOT25A-03)                0.0054 sec
+    AVMotChallenge.get_preprocessed_seq_data(pedestrian)                   0.0125 sec
+    HOTA.eval_sequence()                                                   0.0132 sec
+    Count.eval_sequence()                                                  0.0000 sec
+3 eval_sequence(MOT25A-03, MS-GLMB-GMS)                                  0.0331 sec
+    AVMotChallenge.get_raw_seq_data(MS-GLMB-GMS, MOT25A-04)                0.0037 sec
+    AVMotChallenge.get_preprocessed_seq_data(pedestrian)                   0.0129 sec
+    HOTA.eval_sequence()                                                   0.0122 sec
+    Count.eval_sequence()                                                  0.0000 sec
+4 eval_sequence(MOT25A-04, MS-GLMB-GMS)                                  0.0308 sec
+
+All sequences for MS-GLMB-GMS finished in 0.15 seconds
+
+HOTA: MS-GLMB-GMS-pedestrian       HOTA      DetA      AssA      DetRe     DetPr     AssRe     AssPr     LocA      OWTA      HOTA(0)   LocA(0)   HOTALocA(0)
+MOT25A-01                          47.72     47.72     47.72     48.01     98.421    48.01     98.421    95.614    47.862    48.78     95.515    46.593
+MOT25A-02                          47.72     47.72     47.72     48.01     98.421    48.01     98.421    95.614    47.862    48.78     95.515    46.593
+MOT25A-03                          15.622    9.0442    26.988    9.0715    92.982    27.214    92.982    91.242    15.645    16.898    90.705    15.327
+MOT25A-04                          8.979     7.5142    10.739    7.6166    78.07     12.29     41.992    83.499    9.0374    11.924    76.312    9.0992
+COMBINED                           26.322    18.08     38.404    18.261    93.586    38.919    89.595    92.664    26.462    27.482    91.012    25.012
+
+Count: MS-GLMB-GMS-pedestrian      Dets      GT_Dets   IDs       GT_IDs
+MOT25A-01                          20        41        1         1
+MOT25A-02                          20        41        1         1
+MOT25A-03                          12        123       1         3
+MOT25A-04                          12        123       1         3
+COMBINED                           64        328       4         8
+
+Timing analysis:
+AVMotChallenge.get_raw_seq_data                                        0.0187 sec
+AVMotChallenge.get_preprocessed_seq_data                               0.0515 sec
+HOTA.eval_sequence                                                     0.0631 sec
+Count.eval_sequence                                                    0.0001 sec
+eval_sequence                                                          0.1431 sec
+Evaluator.evaluate                                                     2.3740 sec
+(base) PS C:\Users\Laurens\OneDrive\0_Masterarbeit_SensorFusion_Laurens\Implementation\TrackEval>  c:; cd 'c:\Users\Laurens\OneDrive\0_Masterarbeit_SensorFusion_Laurens\Implementation\TrackEval'; c:\Users\Laurens\AppData\Local\Programs\Python\Python311\python.exe c:\Users\Laurens\.vscode\extensions\ms-python.debugpy-2025.16.0-win32-x64\bundled\libs\debugpy\launcher 65261 -- C:\Users\Laurens\OneDrive\0_Masterarbeit_SensorFusion_Laurens\Implementation\TrackEval\scripts\run_av_mot_challenge.py --BENCHMARK MOT25V --GT_LOC_FORMA '{gt_folder}/{seq}/gt/gt.jsonl' --SPLIT_TO_EVAL train --TRACKERS_TO_EVAL MS-GLMB-GMS --METRICS HOTA --USE_PARALLEL False --NUM_PARALLEL_CORES 1 --DO_PREPROC False
+Error importing BURST due to missing underlying dependency: No module named 'pycocotools'
+
+Eval Config:
+USE_PARALLEL         : False
+NUM_PARALLEL_CORES   : 1
+BREAK_ON_ERROR       : True
+RETURN_ON_ERROR      : False
+LOG_ON_ERROR         : C:\Users\Laurens\OneDrive\0_Masterarbeit_SensorFusion_Laurens\Implementation\TrackEval\error_log.txt
+PRINT_RESULTS        : True
+PRINT_ONLY_COMBINED  : False
+PRINT_CONFIG         : True
+TIME_PROGRESS        : True
+DISPLAY_LESS_PROGRESS : False
+OUTPUT_SUMMARY       : True
+OUTPUT_EMPTY_CLASSES : True
+OUTPUT_DETAILED      : True
+PLOT_CURVES          : True
+
+AVMotChallenge Config:
+PRINT_CONFIG         : True
+GT_FOLDER            : C:\Users\Laurens\OneDrive\0_Masterarbeit_SensorFusion_Laurens\Implementation\TrackEval\data/gt/mot_challenge/
+TRACKERS_FOLDER      : C:\Users\Laurens\OneDrive\0_Masterarbeit_SensorFusion_Laurens\Implementation\TrackEval\data/trackers/mot_challenge/
+OUTPUT_FOLDER        : None
+TRACKERS_TO_EVAL     : ['MS-GLMB-GMS']
+CLASSES_TO_EVAL      : ['pedestrian']
+BENCHMARK            : MOT25V
+SPLIT_TO_EVAL        : train
+INPUT_AS_ZIP         : False
+DO_PREPROC           : False
+TRACKER_SUB_FOLDER   : data
+OUTPUT_SUB_FOLDER    :
+TRACKER_DISPLAY_NAMES : None
+SEQMAP_FOLDER        : None
+SEQMAP_FILE          : None
+SEQ_INFO             : None
+GT_LOC_FORMAT        : {gt_folder}/{seq}/gt/gt.jsonl
+SKIP_SPLIT_FOL       : False
+
+Evaluating 1 tracker(s) on 4 sequence(s) for 1 class(es) on AVMotChallenge dataset using the following metrics: HOTA, Count
+
+
+Evaluating MS-GLMB-GMS
+
+    AVMotChallenge.get_raw_seq_data(MS-GLMB-GMS, MOT25V-01)                0.0061 sec
+    AVMotChallenge.get_preprocessed_seq_data(pedestrian)                   0.0160 sec
+    HOTA.eval_sequence()                                                   0.0437 sec
+    Count.eval_sequence()                                                  0.0003 sec
+1 eval_sequence(MOT25V-01, MS-GLMB-GMS)                                  0.0691 sec
+    AVMotChallenge.get_raw_seq_data(MS-GLMB-GMS, MOT25V-02)                0.0066 sec
+    AVMotChallenge.get_preprocessed_seq_data(pedestrian)                   0.0143 sec
+    HOTA.eval_sequence()                                                   0.0281 sec
+    Count.eval_sequence()                                                  0.0000 sec
+2 eval_sequence(MOT25V-02, MS-GLMB-GMS)                                  0.0510 sec
+    AVMotChallenge.get_raw_seq_data(MS-GLMB-GMS, MOT25V-03)                0.0039 sec
+    AVMotChallenge.get_preprocessed_seq_data(pedestrian)                   0.0163 sec
+    HOTA.eval_sequence()                                                   0.0410 sec
+    Count.eval_sequence()                                                  0.0000 sec
+3 eval_sequence(MOT25V-03, MS-GLMB-GMS)                                  0.0640 sec
+    AVMotChallenge.get_raw_seq_data(MS-GLMB-GMS, MOT25V-04)                0.0039 sec
+    AVMotChallenge.get_preprocessed_seq_data(pedestrian)                   0.0155 sec
+    HOTA.eval_sequence()                                                   0.0425 sec
+    Count.eval_sequence()                                                  0.0000 sec
+4 eval_sequence(MOT25V-04, MS-GLMB-GMS)                                  0.0638 sec
+
+All sequences for MS-GLMB-GMS finished in 0.25 seconds
+
+HOTA: MS-GLMB-GMS-pedestrian       HOTA      DetA      AssA      DetRe     DetPr     AssRe     AssPr     LocA      OWTA      HOTA(0)   LocA(0)   HOTALocA(0)
+MOT25V-01                          80.016    80.016    80.016    81.643    95.639    81.643    95.639    94.026    80.785    85.366    93.611    79.912
+MOT25V-02                          35.1      49.104    25.148    49.679    92.584    25.348    93.469    91.162    35.33     38.099    90.614    34.523
+MOT25V-03                          70.3      69.557    71.062    71.545    92.632    72.879    93.178    91.441    71.282    77.756    90.486    70.359
+MOT25V-04                          70.899    70.399    71.422    72.401    92.763    73.254    93.381    91.55     71.892    78.277    90.619    70.934
+COMBINED                           68.536    68.611    68.486    70.395    93.103    70.167    93.739    91.827    69.422    75.215    90.99     68.439
+
+Count: MS-GLMB-GMS-pedestrian      Dets      GT_Dets   IDs       GT_IDs
+MOT25V-01                          35        41        1         1
+MOT25V-02                          22        41        2         1
+MOT25V-03                          95        123       3         3
+MOT25V-04                          96        123       3         3
+COMBINED                           248       328       9         8
+
+Timing analysis:
+AVMotChallenge.get_raw_seq_data                                        0.0205 sec
+AVMotChallenge.get_preprocessed_seq_data                               0.0622 sec
+HOTA.eval_sequence                                                     0.1553 sec
+Count.eval_sequence                                                    0.0003 sec
+eval_sequence                                                          0.2479 sec
+Evaluator.evaluate                                                     2.4274 sec
+(base) PS C:\Users\Laurens\OneDrive\0_Masterarbeit_SensorFusion_Laurens\Implementation\TrackEval>  c:; cd 'c:\Users\Laurens\OneDrive\0_Masterarbeit_SensorFusion_Laurens\Implementation\TrackEval'; c:\Users\Laurens\AppData\Local\Programs\Python\Python311\python.exe c:\Users\Laurens\.vscode\extensions\ms-python.debugpy-2025.16.0-win32-x64\bundled\libs\debugpy\launcher 65314 -- C:\Users\Laurens\OneDrive\0_Masterarbeit_SensorFusion_Laurens\Implementation\TrackEval\scripts\run_av_mot_challenge.py --BENCHMARK MOT25AV --GT_LOC_FORMA '{gt_folder}/{seq}/gt/gt.jsonl' --SPLIT_TO_EVAL train --TRACKERS_TO_EVAL MS-GLMB-GMS --METRICS HOTA --USE_PARALLEL False --NUM_PARALLEL_CORES 1 --DO_PREPROC False
+Error importing BURST due to missing underlying dependency: No module named 'pycocotools'
+
+Eval Config:
+USE_PARALLEL         : False
+NUM_PARALLEL_CORES   : 1
+BREAK_ON_ERROR       : True
+RETURN_ON_ERROR      : False
+LOG_ON_ERROR         : C:\Users\Laurens\OneDrive\0_Masterarbeit_SensorFusion_Laurens\Implementation\TrackEval\error_log.txt
+PRINT_RESULTS        : True
+PRINT_ONLY_COMBINED  : False
+PRINT_CONFIG         : True
+TIME_PROGRESS        : True
+DISPLAY_LESS_PROGRESS : False
+OUTPUT_SUMMARY       : True
+OUTPUT_EMPTY_CLASSES : True
+OUTPUT_DETAILED      : True
+PLOT_CURVES          : True
+
+AVMotChallenge Config:
+PRINT_CONFIG         : True
+GT_FOLDER            : C:\Users\Laurens\OneDrive\0_Masterarbeit_SensorFusion_Laurens\Implementation\TrackEval\data/gt/mot_challenge/
+TRACKERS_FOLDER      : C:\Users\Laurens\OneDrive\0_Masterarbeit_SensorFusion_Laurens\Implementation\TrackEval\data/trackers/mot_challenge/
+OUTPUT_FOLDER        : None
+TRACKERS_TO_EVAL     : ['MS-GLMB-GMS']
+CLASSES_TO_EVAL      : ['pedestrian']
+BENCHMARK            : MOT25AV
+SPLIT_TO_EVAL        : train
+INPUT_AS_ZIP         : False
+DO_PREPROC           : False
+TRACKER_SUB_FOLDER   : data
+OUTPUT_SUB_FOLDER    :
+TRACKER_DISPLAY_NAMES : None
+SEQMAP_FOLDER        : None
+SEQMAP_FILE          : None
+SEQ_INFO             : None
+GT_LOC_FORMAT        : {gt_folder}/{seq}/gt/gt.jsonl
+SKIP_SPLIT_FOL       : False
+
+Evaluating 1 tracker(s) on 4 sequence(s) for 1 class(es) on AVMotChallenge dataset using the following metrics: HOTA, Count
+
+
+Evaluating MS-GLMB-GMS
+
+    AVMotChallenge.get_raw_seq_data(MS-GLMB-GMS, MOT25AV-01)               0.0041 sec
+    AVMotChallenge.get_preprocessed_seq_data(pedestrian)                   0.0145 sec
+    HOTA.eval_sequence()                                                   0.0262 sec
+    Count.eval_sequence()                                                  0.0000 sec
+1 eval_sequence(MOT25AV-01, MS-GLMB-GMS)                                 0.0464 sec
+    AVMotChallenge.get_raw_seq_data(MS-GLMB-GMS, MOT25AV-02)               0.0048 sec
+    AVMotChallenge.get_preprocessed_seq_data(pedestrian)                   0.0139 sec
+    HOTA.eval_sequence()                                                   0.0264 sec
+    Count.eval_sequence()                                                  0.0000 sec
+2 eval_sequence(MOT25AV-02, MS-GLMB-GMS)                                 0.0474 sec
+    AVMotChallenge.get_raw_seq_data(MS-GLMB-GMS, MOT25AV-03)               0.0067 sec
+    AVMotChallenge.get_preprocessed_seq_data(pedestrian)                   0.0144 sec
+    HOTA.eval_sequence()                                                   0.0258 sec
+    Count.eval_sequence()                                                  0.0000 sec
+3 eval_sequence(MOT25AV-03, MS-GLMB-GMS)                                 0.0493 sec
+    AVMotChallenge.get_raw_seq_data(MS-GLMB-GMS, MOT25AV-04)               0.0036 sec
+    AVMotChallenge.get_preprocessed_seq_data(pedestrian)                   0.0151 sec
+    HOTA.eval_sequence()                                                   0.0273 sec
+    Count.eval_sequence()                                                  0.0000 sec
+4 eval_sequence(MOT25AV-04, MS-GLMB-GMS)                                 0.0478 sec
+
+All sequences for MS-GLMB-GMS finished in 0.19 seconds
+
+HOTA: MS-GLMB-GMS-pedestrian       HOTA      DetA      AssA      DetRe     DetPr     AssRe     AssPr     LocA      OWTA      HOTA(0)   LocA(0)   HOTALocA(0)
+MOT25AV-01                         80.369    80.369    80.369    81.9      95.94     81.9      95.94     94.097    81.091    85.366    93.706    79.993
+MOT25AV-02                         79.493    79.493    79.493    80.873    94.737    80.873    94.737    92.765    80.134    85.366    92.371    78.853
+MOT25AV-03                         68.413    67.606    69.249    69.448    92.849    70.928    93.493    91.572    69.334    75.334    90.655    68.294
+MOT25AV-04                         65.116    64.288    65.973    66.11     92.404    67.722    93.103    91.426    66.023    72.271    90.394    65.329
+COMBINED                           70.294    69.378    71.236    71.181    93.389    72.878    93.971    92.044    71.193    76.868    91.231    70.127
+
+Count: MS-GLMB-GMS-pedestrian      Dets      GT_Dets   IDs       GT_IDs
+MOT25AV-01                         35        41        1         1
+MOT25AV-02                         35        41        1         1
+MOT25AV-03                         92        123       3         3
+MOT25AV-04                         88        123       3         3
+COMBINED                           250       328       8         8
+
+Timing analysis:
+AVMotChallenge.get_raw_seq_data                                        0.0192 sec
+AVMotChallenge.get_preprocessed_seq_data                               0.0579 sec
+HOTA.eval_sequence                                                     0.1058 sec
+Count.eval_sequence                                                    0.0000 sec
+eval_sequence                                                          0.1909 sec
+Evaluator.evaluate                                                     2.2957 sec
