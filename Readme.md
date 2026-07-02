@@ -4,7 +4,7 @@ This repository provides the **Track Evaluation Software Module** used to quanti
 
 The evaluation focuses on **Higher Order Tracking Accuracy (HOTA)** and its decomposed sub-metrics, enabling a detailed analysis of detection, association, and localization performance.
 
-
+![Scene Diagram](Images/AVSensorFusionArchitecture.svg)
 
 ---
 
